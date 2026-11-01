@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>404｜頁面不存在 — Slynx_ch</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Noto+Serif+TC:wght@300&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .lost {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: 100vh; min-height: 100svh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 120px var(--pad); text-align: center;
+    }
+    .lost::before {
+      content: ""; position: absolute; z-index: -1; left: 50%; top: 46%;
+      width: 70vmax; height: 70vmax; transform: translate(-50%, -50%);
+      background: radial-gradient(closest-side, rgba(201, 169, 110, .16), rgba(201, 169, 110, .04) 50%, transparent 72%);
+    }
+    .lost__code {
+      font-family: var(--font-display); font-weight: 300; font-style: italic;
+      font-size: clamp(8rem, 30vw, 22rem); line-height: .85; letter-spacing: -.04em;
+      background: var(--gold-gradient); background-size: 220% 100%;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: shimmer 8s linear infinite, fade-up 1.6s var(--ease-out) both;
+      padding: 0 .1em .08em;
+    }
+    .lost__title {
+      margin-top: 24px;
+      font-family: var(--font-serif); font-weight: 300; font-size: clamp(1.5rem, 3vw, 2.2rem); letter-spacing: .24em;
+      animation: fade-up 1.6s .15s var(--ease-out) both;
+    }
+    .lost__text {
+      margin-top: 14px;
+      font-family: var(--font-display); font-style: italic; font-size: clamp(1.1rem, 1.8vw, 1.4rem); color: var(--muted);
+      animation: fade-up 1.6s .25s var(--ease-out) both;
+    }
+    .lost .btn { margin-top: 48px; animation: fade-up 1.6s .35s var(--ease-out) both; }
+    .lost__brand {
+      position: absolute; top: clamp(20px, 4vh, 36px); left: var(--pad);
+      font-family: var(--font-display); font-style: italic; font-size: 30px; line-height: 1;
+    }
+    .lost__brand span { color: var(--gold); }
+    @keyframes fade-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body data-theme="dark">
+  <div class="grain" aria-hidden="true"></div>
+  <main class="lost">
+    <a class="lost__brand" href="/" aria-label="Slynx_ch 首頁">S<span>.</span></a>
+    <p class="lost__code" aria-hidden="true">404</p>
+    <h1 class="lost__title">此頁面不存在</h1>
+    <p class="lost__text" lang="en">The page you’re looking for has drifted beyond the orbit.</p>
+    <a class="btn" href="/">
+      <span class="roll"><span data-text="返回首頁">返回首頁</span></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg>
+    </a>
+  </main>
+</body>
+</html>
