@@ -1,42 +1,389 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>我的個人主頁</title>
-  <style>
-    body {
-      max-width: 760px;
-      margin: 80px auto;
-      padding: 0 24px;
-      font-family: system-ui, sans-serif;
-      line-height: 1.8;
-      color: #243047;
-      background: #f6f8fc;
-    }
-    h1 { font-size: 42px; }
-    section {
-      margin: 24px 0;
-      padding: 24px;
-      background: white;
-      border-radius: 16px;
-    }
-    a { color: #2563eb; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Slynx_ch｜電腦科學・程式設計・AI・經典閱讀</title>
+  <meta name="description" content="你好，我是 Slynx_ch。一名喜歡電腦科學、程式設計、AI 與閱讀經典書籍的大學生。這裡會陸續分享我的專案與學習成果。">
+  <meta name="author" content="Slynx_ch">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://slynxch.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Slynx_ch">
+  <meta property="og:url" content="https://slynxch.github.io/">
+  <meta property="og:title" content="Slynx_ch — Personal Website">
+  <meta property="og:description" content="一名喜歡電腦科學、程式設計、AI 與閱讀經典書籍的大學生。">
+  <meta property="og:image" content="https://slynxch.github.io/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Slynx_ch — Personal Website">
+  <meta name="twitter:description" content="一名喜歡電腦科學、程式設計、AI 與閱讀經典書籍的大學生。">
+  <meta name="twitter:image" content="https://slynxch.github.io/assets/og-image.jpg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.className = 'js';</script>
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
-  <h1>你好，我是Slynx_ch 👋</h1>
-  <p>歡迎來到我的個人網站。</p>
+<body data-theme="dark">
+  <a class="skip-link" href="#main">跳至主要內容</a>
 
-  <section>
-    <h2>關於我</h2>
-    <p>我是一名大學生，喜歡電腦科學、程式設計、AI與閱讀經典書籍。</p>
-  </section>
+  <!-- ============ Preloader ============ -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__brand" data-split-mask>Slynx_ch</div>
+    <div class="preloader__foot">
+      <span class="preloader__tag">Code&nbsp;·&nbsp;Intelligence&nbsp;·&nbsp;Classics</span>
+      <span class="preloader__count"><span data-count>000</span></span>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
 
-  <section>
-    <h2>我的作品</h2>
-    <p>這裡會陸續分享我的專案與學習成果。</p>
-    <a href="https://github.com/Slynxch">查看我的 GitHub</a>
-  </section>
+  <!-- ============ Ambient layers ============ -->
+  <div class="cursor-ring" aria-hidden="true"><span class="cursor-ring__inner"><span class="cursor-ring__label"></span></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <!-- ============ Navigation ============ -->
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="Slynx_ch — 回到頂部">S<span>.</span></a>
+    <nav class="nav__links" aria-label="主要導覽">
+      <a class="nav__link" href="#about"><sup>01</sup><span class="roll"><span data-text="關於">關於</span></span></a>
+      <a class="nav__link" href="#interests"><sup>02</sup><span class="roll"><span data-text="興趣">興趣</span></span></a>
+      <a class="nav__link" href="#works"><sup>03</sup><span class="roll"><span data-text="作品">作品</span></span></a>
+      <a class="nav__link" href="#contact"><sup>04</sup><span class="roll"><span data-text="聯絡">聯絡</span></span></a>
+    </nav>
+    <a class="nav__cta" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer">
+      <span class="roll"><span data-text="GitHub">GitHub</span></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg>
+    </a>
+    <button class="nav__toggle" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ Mobile menu ============ -->
+  <div class="menu" id="menu" aria-hidden="true" inert>
+    <nav class="menu__nav" aria-label="行動版導覽">
+      <a class="menu__link" href="#about"><sup>01</sup><span>關於<em lang="en">About</em></span></a>
+      <a class="menu__link" href="#interests"><sup>02</sup><span>興趣<em lang="en">Interests</em></span></a>
+      <a class="menu__link" href="#works"><sup>03</sup><span>作品<em lang="en">Works</em></span></a>
+      <a class="menu__link" href="#contact"><sup>04</sup><span>聯絡<em lang="en">Contact</em></span></a>
+    </nav>
+    <div class="menu__foot">
+      <span>Slynx_ch — Personal Website</span>
+      <a href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" aria-label="開場">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__side" aria-hidden="true">
+        <span data-intro style="--d:1.2s">電腦科學・程式設計・人工智慧・經典閱讀</span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-intro style="--d:.1s">
+          <span lang="en">Personal Website</span><span class="hero__eyebrow-sep"></span><span>個人網站</span>
+        </p>
+        <h1 class="hero__heading">
+          <span class="hero__hello" data-intro style="--d:.25s">你好，我是</span>
+          <span class="hero__name" data-split-mask lang="en"><span class="hero__name-main">Slynx</span><em class="hero__name-accent">_ch</em></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__welcome" data-intro style="--d:.95s">
+            <span class="label" lang="en">Welcome</span>
+            歡迎來到我的個人網站。
+          </p>
+          <p class="hero__lead" data-intro style="--d:1.05s">
+            一名熱愛電腦科學、程式設計與 AI 的大學生，<br class="br-lg">也在經典書籍裡，尋找思考的深度。
+          </p>
+          <a class="scroll-cue" href="#about" data-intro style="--d:1.15s" aria-label="向下捲動至關於我">
+            <span lang="en">Scroll</span><i aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item">Computer Science<sup>電腦科學</sup></span><span class="marquee__star">✦</span>
+          <span class="marquee__item is-outline">Programming<sup>程式設計</sup></span><span class="marquee__star">✦</span>
+          <span class="marquee__item">Artificial Intelligence<sup>人工智慧</sup></span><span class="marquee__star">✦</span>
+          <span class="marquee__item is-outline">Classic Literature<sup>經典閱讀</sup></span><span class="marquee__star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 01 · About ============ -->
+    <section class="section about" id="about" data-theme="light">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-head__index">(01)</span>
+          <h2 class="section-head__label"><span lang="en">About</span>&ensp;—&ensp;關於我</h2>
+          <span class="section-head__line" data-reveal="line"></span>
+        </div>
+
+        <p class="about__statement" data-scrub>我是一名大學生，喜歡<em>電腦科學</em>、<em>程式設計</em>、<em>AI</em> 與閱讀<em>經典書籍</em>。</p>
+
+        <div class="about__grid">
+          <div class="about__visual" data-reveal="clip" aria-hidden="true">
+            <div class="arch">
+              <svg class="arch__orbits" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+                <g fill="none" stroke="currentColor" stroke-width=".6">
+                  <circle cx="200" cy="250" r="96"/>
+                  <circle cx="200" cy="250" r="146" stroke-dasharray="1.5 6"/>
+                  <circle cx="200" cy="250" r="196"/>
+                  <ellipse cx="200" cy="250" rx="196" ry="58" transform="rotate(-22 200 250)"/>
+                </g>
+                <g class="arch__spin">
+                  <circle cx="396" cy="250" r="2.6" fill="currentColor"/>
+                </g>
+                <g class="arch__spin arch__spin--slow">
+                  <circle cx="200" cy="104" r="2" fill="currentColor"/>
+                </g>
+              </svg>
+              <span class="arch__letter" data-parallax="-0.06">S</span>
+              <span class="arch__caption" lang="en">Student&ensp;·&ensp;Coder&ensp;·&ensp;Reader</span>
+            </div>
+          </div>
+
+          <div class="about__body">
+            <p class="about__text" data-reveal>
+              對我而言，程式是一種精確的語言，經典是一種恆久的語言——前者讓我學會建構世界，後者讓我學會理解世界。這個網站記錄我在兩者之間的學習與思考，也將陸續分享我的專案與成果。
+            </p>
+            <dl class="facts" data-stagger>
+              <div class="facts__row" data-reveal>
+                <dt lang="en">Identity</dt>
+                <dd>大學生<span lang="en">University Student</span></dd>
+              </div>
+              <div class="facts__row" data-reveal>
+                <dt lang="en">Focus</dt>
+                <dd>電腦科學・程式設計・AI<span lang="en">CS · Programming · AI</span></dd>
+              </div>
+              <div class="facts__row" data-reveal>
+                <dt lang="en">Reading</dt>
+                <dd>經典書籍<span lang="en">The Classics</span></dd>
+              </div>
+              <div class="facts__row" data-reveal>
+                <dt lang="en">Find me</dt>
+                <dd><a class="u-link" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer">GitHub @Slynxch</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Quote ============ -->
+    <section class="section quote" data-theme="light" aria-label="引言">
+      <figure class="container quote__inner">
+        <div class="quote__mark" aria-hidden="true" data-reveal>“</div>
+        <blockquote class="quote__text" data-scrub>
+          <p>學而不思則罔，<br>思而不學則殆。</p>
+        </blockquote>
+        <p class="quote__en" lang="en" data-reveal>“Learning without thought is labour lost;<br class="br-lg"> thought without learning is perilous.”</p>
+        <figcaption class="quote__cite" data-reveal>— 孔子《論語・為政》</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ 02 · Interests ============ -->
+    <section class="section interests" id="interests">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-head__index">(02)</span>
+          <p class="section-head__label"><span lang="en">Interests</span>&ensp;—&ensp;興趣領域</p>
+          <span class="section-head__line" data-reveal="line"></span>
+        </div>
+
+        <div class="title-row">
+          <h2 class="title" data-reveal="mask">
+            <span class="mask"><span>興趣領域</span></span>
+            <span class="mask"><em lang="en">Where curiosity lives.</em></span>
+          </h2>
+          <p class="title-row__text" data-reveal>四個彼此交織的方向，構成我理解世界的方式：以理性分析問題，以程式實現想法，以人文校準方向。</p>
+        </div>
+
+        <ul class="cards" data-stagger>
+          <li data-reveal>
+            <article class="card" data-tilt>
+              <div class="card__top">
+                <span class="card__num">01</span>
+                <svg class="card__icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path pathLength="1" d="M32 6 56 19v26L32 58 8 45V19Z"/>
+                  <path pathLength="1" d="M8 19l24 13 24-13M32 32v26"/>
+                  <path pathLength="1" d="M20 25.5 44 12.5M20 38.5v-13M44 38.5v-13" opacity=".45"/>
+                  <circle pathLength="1" cx="32" cy="32" r="2.6"/>
+                </svg>
+              </div>
+              <div class="card__body">
+                <h3 class="card__en" lang="en">Computer Science</h3>
+                <p class="card__zh">電腦科學</p>
+                <p class="card__desc">從演算法、資料結構到系統架構，理解計算背後的原理與秩序。</p>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card" data-tilt>
+              <div class="card__top">
+                <span class="card__num">02</span>
+                <svg class="card__icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path pathLength="1" d="M22 18 8 32l14 14"/>
+                  <path pathLength="1" d="M42 18l14 14-14 14"/>
+                  <path pathLength="1" d="M37 11 27 53"/>
+                </svg>
+              </div>
+              <div class="card__body">
+                <h3 class="card__en" lang="en">Programming</h3>
+                <p class="card__zh">程式設計</p>
+                <p class="card__desc">將想法化為可運行的現實，追求清晰、優雅且經得起時間的程式碼。</p>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card" data-tilt>
+              <div class="card__top">
+                <span class="card__num">03</span>
+                <svg class="card__icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path pathLength="1" d="M14.6 21.5 29.4 13.5M14.6 22.5l14.8 8M14.6 23.5 29.4 50.5M14.6 40.5l14.8-27M14.6 41.5l14.8-8M14.6 42.5l14.8 8M34.6 13.5l14.8 10M34.6 31l14.8-6M34.6 33l14.8 6M34.6 50.5l14.8-10" opacity=".5"/>
+                  <circle pathLength="1" cx="12" cy="22" r="2.6"/>
+                  <circle pathLength="1" cx="12" cy="42" r="2.6"/>
+                  <circle pathLength="1" cx="32" cy="12" r="2.6"/>
+                  <circle pathLength="1" cx="32" cy="32" r="2.6"/>
+                  <circle pathLength="1" cx="32" cy="52" r="2.6"/>
+                  <circle pathLength="1" cx="52" cy="25" r="2.6"/>
+                  <circle pathLength="1" cx="52" cy="40" r="2.6"/>
+                </svg>
+              </div>
+              <div class="card__body">
+                <h3 class="card__en" lang="en">Artificial Intelligence</h3>
+                <p class="card__zh">人工智慧</p>
+                <p class="card__desc">探索機器學習與智慧系統，思考技術如何延伸人類的可能。</p>
+              </div>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card" data-tilt>
+              <div class="card__top">
+                <span class="card__num">04</span>
+                <svg class="card__icon" viewBox="0 0 64 64" aria-hidden="true">
+                  <path pathLength="1" d="M32 17c-6-4-14-5.4-24-4.4v36c10-1 18 .4 24 4.4 6-4 14-5.4 24-4.4v-36c-10-1-18 .4-24 4.4Z"/>
+                  <path pathLength="1" d="M32 17v36"/>
+                  <path pathLength="1" d="M14 21c4.4 0 8.4.7 12 2.2M14 28c4.4 0 8.4.7 12 2.2M14 35c4.4 0 8.4.7 12 2.2M38 23.2c3.6-1.5 7.6-2.2 12-2.2M38 30.2c3.6-1.5 7.6-2.2 12-2.2M38 37.2c3.6-1.5 7.6-2.2 12-2.2" opacity=".45"/>
+                </svg>
+              </div>
+              <div class="card__body">
+                <h3 class="card__en" lang="en">Classic Reading</h3>
+                <p class="card__zh">經典閱讀</p>
+                <p class="card__desc">與跨越時代的偉大心靈對話，為理性的思考注入人文的溫度。</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 03 · Works ============ -->
+    <section class="section works" id="works">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-head__index">(03)</span>
+          <p class="section-head__label"><span lang="en">Works</span>&ensp;—&ensp;我的作品</p>
+          <span class="section-head__line" data-reveal="line"></span>
+        </div>
+
+        <div class="title-row">
+          <h2 class="title" data-reveal="mask">
+            <span class="mask"><span>我的作品</span></span>
+            <span class="mask"><em lang="en">Selected Works</em><sup class="title__count" data-repo-count hidden></sup></span>
+          </h2>
+          <p class="title-row__text" data-reveal>這裡會陸續分享我的專案與學習成果。<br>以下內容即時同步自我的 GitHub。</p>
+        </div>
+
+        <ol class="works__list" data-repos aria-live="polite">
+          <li class="work">
+            <a class="work__link" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer">
+              <span class="work__index">01</span>
+              <span class="work__main">
+                <span class="work__name">GitHub</span>
+                <span class="work__desc">前往我的 GitHub，瀏覽所有專案與學習紀錄。</span>
+              </span>
+              <span class="work__meta">@Slynxch</span>
+              <span class="work__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+            </a>
+          </li>
+        </ol>
+        <p class="works__note" data-repos-note hidden></p>
+
+        <div class="works__cta" data-reveal>
+          <a class="btn" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer" data-magnetic="0.3">
+            <span class="roll"><span data-text="查看我的 GitHub">查看我的 GitHub</span></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 · Contact ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="section-head__index">(04)</span>
+          <p class="section-head__label"><span lang="en">Contact</span>&ensp;—&ensp;聯絡</p>
+          <span class="section-head__line" data-reveal="line"></span>
+        </div>
+
+        <h2 class="contact__title" data-reveal="mask" lang="en">
+          <span class="mask"><span>Let’s create</span></span>
+          <span class="mask"><span><em>something</em> timeless.</span></span>
+        </h2>
+
+        <div class="contact__row">
+          <div class="contact__text" data-reveal>
+            <p class="contact__zh">期待與你交流。</p>
+            <p>歡迎透過 GitHub 與我聯繫——無論是專案合作、技術討論，或是推薦一本值得一讀的經典。</p>
+            <a class="contact__link" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer">
+              <span>github.com/Slynxch</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg>
+            </a>
+          </div>
+
+          <div class="contact__badge" data-reveal>
+            <a class="badge" href="https://github.com/Slynxch" target="_blank" rel="noopener noreferrer" data-magnetic="0.4" aria-label="前往 Slynx_ch 的 GitHub">
+              <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true">
+                <defs><path id="badge-circle" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs>
+                <text><textPath href="#badge-circle" textLength="500" lengthAdjust="spacing">SLYNX_CH ✦ GITHUB ✦ SLYNX_CH ✦ GITHUB ✦</textPath></text>
+              </svg>
+              <span class="badge__core"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="footer__row">
+      <span>© <span data-year>2026</span> Slynx_ch</span>
+      <span lang="en">Crafted with code &amp; classics</span>
+      <a class="footer__top" href="#top"><span class="roll"><span data-text="回到頂部 ↑">回到頂部 ↑</span></span></a>
+    </div>
+    <div class="footer__mark" aria-hidden="true" lang="en">Slynx<em>_ch</em></div>
+  </footer>
 </body>
 </html>
